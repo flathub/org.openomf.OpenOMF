@@ -137,7 +137,7 @@
         {
           "type": "git",
           "url": "https://github.com/omf2097/OpenOMF.git",
-          "commit": "3290a181c06b941cde1b58cea8b669cd2f8f541d"
+          "tag": "0.8.0"
         }
       ],
       "config-opts": [
