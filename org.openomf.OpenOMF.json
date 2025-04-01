@@ -8,7 +8,8 @@
     "--socket=wayland",
     "--socket=fallback-x11",
     "--share=ipc",
-    "--device=dri",
+    "--share=network",
+    "--device=all",
     "--socket=pulseaudio"
   ],
   "cleanup": [
@@ -31,21 +32,6 @@
       "config-opts": [
           "-DBUILD_STATIC=OFF",
           "-DBUILD_SHARED=ON"
-      ]
-    },
-    {
-      "name": "argtable3",
-      "buildsystem": "cmake-ninja",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/argtable/argtable3",
-          "tag": "v3.2.2.f25c624"
-        }
-      ],
-      "config-opts": [
-          "-DARGTABLE3_ENABLE_EXAMPLES=OFF",
-          "-DBUILD_SHARED_LIBS=ON"
       ]
     },
     {
@@ -112,7 +98,7 @@
         "sources": [
             {
             "type": "archive",
-            "url": "https://www.omf2097.com/pub/files/omf/omf2097-assets.zip",
+            "url": "https://www.omf2097.com/pub/files/omf/openomf-assets.zip",
             "sha256": "de472c786adf9e618bf4b71a5f2cb85bb0b090f27da2b3008f305453a8dea67d"
             }
         ],
@@ -137,8 +123,8 @@
             }
         ],
         "build-commands": [
-            "install -Dm644 omf-48x48.png ${FLATPAK_DEST}/share/icons/hicolor/64x64/apps/org.openomf.OpenOMF.png",
-            "install -Dm644 omf-64x64.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/org.openomf.OpenOMF.png",
+            "install -Dm644 omf-48x48.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/org.openomf.OpenOMF.png",
+            "install -Dm644 omf-64x64.png ${FLATPAK_DEST}/share/icons/hicolor/64x64/apps/org.openomf.OpenOMF.png",
             "install -Dm644 omf-128x128.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.openomf.OpenOMF.png",
             "install -Dm644 omf-256x256.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/org.openomf.OpenOMF.png"
         ]
@@ -151,7 +137,7 @@
         {
           "type": "git",
           "url": "https://github.com/omf2097/OpenOMF.git",
-          "commit": "90f341a599f339332e5572a0544ec86b5ed291f9"
+          "commit": "3290a181c06b941cde1b58cea8b669cd2f8f541d"
         }
       ],
       "config-opts": [
