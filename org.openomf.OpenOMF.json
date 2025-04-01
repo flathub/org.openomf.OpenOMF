@@ -141,6 +141,7 @@
         }
       ],
       "config-opts": [
+          "-DCMAKE_BUILD_TYPE=Release",
           "-DUSE_MINIUPNPC=YES",
           "-DUSE_NATPMP=YES"
       ],
