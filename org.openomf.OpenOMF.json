@@ -148,6 +148,7 @@
       ],
       "post-install": [
         "install -Dm644 resources/flatpak/org.openomf.OpenOMF.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo",
+        "sed -i 's/https:\\/\\/openomf/https:\\/\\/www.openomf/g' ${FLATPAK_DEST}/share/metainfo/org.openomf.OpenOMF.metainfo.xml",
         "install -Dm644 resources/flatpak/org.openomf.OpenOMF.desktop -t ${FLATPAK_DEST}/share/applications"
       ]
     }
