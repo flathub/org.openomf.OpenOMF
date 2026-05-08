@@ -145,6 +145,7 @@
           "type": "git",
           "url": "https://github.com/omf2097/OpenOMF.git",
           "tag": "0.8.5",
+          "commit": "6d17958ba059a250442c11c1f0fe164de453edbe",
           "disable-shallow-clone": true
         }
       ],
