@@ -22,6 +22,7 @@
       "*.la"
   ],
   "modules": [
+    "shared-modules/SDL2/SDL2_mixer.json",
     {
       "name": "libxmp",
       "buildsystem": "cmake-ninja",
