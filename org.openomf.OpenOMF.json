@@ -30,7 +30,7 @@
         {
           "type": "git",
           "url": "https://github.com/libxmp/libxmp",
-          "tag": "libxmp-4.7.3"
+          "tag": "libxmp-4.7.3",
           "commit": "1e0812137e4f9e15cc026c0c75af82d71d3cb5ad"
         }
       ],
