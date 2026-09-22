@@ -14,10 +14,13 @@
   ],
   "cleanup": [
       "/include",
+      "/lib/cmake",
+      "/lib/pkgconfig",
       "/share/doc",
+      "/share/man",
       "*.a",
       "*.la"
-      ],
+  ],
   "modules": [
     {
       "name": "libxmp",
@@ -26,7 +29,8 @@
         {
           "type": "git",
           "url": "https://github.com/libxmp/libxmp",
-          "tag": "libxmp-4.6.1"
+          "tag": "libxmp-4.7.3"
+          "commit": "1e0812137e4f9e15cc026c0c75af82d71d3cb5ad"
         }
       ],
       "config-opts": [
@@ -52,7 +56,8 @@
         {
           "type": "git",
           "url": "https://github.com/libconfuse/libconfuse",
-          "tag": "v3.3"
+          "tag": "v3.3",
+          "commit": "a42aebf13db33afd575da6e63f55163d371f776d"
         }
       ]
     },
@@ -63,7 +68,8 @@
         {
           "type": "git",
           "url": "https://github.com/transmission/miniupnpc",
-          "tag": "miniupnpc_2_3_0"
+          "tag": "miniupnpc_2_3_9",
+          "commit": "a3b8ed5abaee1456c8fd2fd1511de958c3d5153e"
         }
       ],
       "config-opts": [
@@ -82,7 +88,8 @@
         {
           "type": "git",
           "url": "https://github.com/miniupnp/libnatpmp",
-          "commit": "8257134a5dcb077e40db1946554d676e444406e4"
+          "//note": "latest commit on the repo",
+          "commit": "134fc89e2781e154e40042641f4d8bcbe42579f1"
         }
       ],
       "config-opts": [
@@ -138,6 +145,7 @@
           "type": "git",
           "url": "https://github.com/omf2097/OpenOMF.git",
           "tag": "0.8.6",
+          "commit": "e389b0b5f96c9eda5f2894cacd19202952cdc8a3",
           "disable-shallow-clone": true
         }
       ],
