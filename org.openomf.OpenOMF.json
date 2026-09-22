@@ -10,7 +10,9 @@
     "--share=ipc",
     "--share=network",
     "--device=all",
-    "--socket=pulseaudio"
+    "--socket=pulseaudio",
+    "--env=OPENOMF_RESOURCE_PATH=/app/share/games/openomf",
+    "--env=SteamVirtualGamepadInfo="
   ],
   "cleanup": [
       "/include",
@@ -111,13 +113,13 @@
             }
         ],
         "build-commands": [
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.BK",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.TRN",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.AF",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.PIC",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.PSM",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.DAT",
-            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/ *.PCX"
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.BK",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.TRN",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.AF",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.PIC",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.PSM",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.DAT",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/resources/ *.PCX"
         ]
     },
     {
@@ -137,6 +139,21 @@
             "install -Dm644 omf-256x256.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/org.openomf.OpenOMF.png"
         ]
     },
+    {
+        "name": "omf2097-mods",
+        "buildsystem": "simple",
+        "sources": [
+            {
+            "type": "archive",
+            "url": "https://github.com/omf2097/openomf-music-mod/releases/download/1.0/openomf-mods-1.0.zip",
+            "sha256": "ba268cea7f9d0dc4de04d367ca91165cf346f1769cd494170937d590e45fbe2d"
+            }
+        ],
+        "build-commands": [
+            "install -Dm644 -t ${FLATPAK_DEST}/share/games/openomf/mods/ *.zip"
+        ]
+    },
+
 
     {
       "name": "openomf",
